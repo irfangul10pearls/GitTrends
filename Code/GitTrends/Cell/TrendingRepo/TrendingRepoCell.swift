@@ -4,7 +4,7 @@ import UIKit
 
 class TrendingRepoCell: UITableViewCell {
 
-    @IBOutlet weak var imgViewAuthorDP: UIImageView!
+    @IBOutlet weak var imgViewAuthorDP: DPImageView!
     @IBOutlet weak var lblAuthorName: UILabel!
     @IBOutlet weak var lblRepoName: UILabel!
     @IBOutlet weak var lblRepoRemarks: UILabel!
