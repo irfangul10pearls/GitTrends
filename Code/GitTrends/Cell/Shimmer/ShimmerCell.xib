@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShimmerCell" customModule="GitTrends" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="hO4-RT-Fo8" customClass="ShimmerCell" customModule="GitTrends" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hO4-RT-Fo8" id="qGP-Kt-s5a">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AkU-7S-hHo">
+                        <rect key="frame" x="20" y="10.5" width="45" height="44"/>
+                        <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="45" id="7H1-oS-cpo"/>
+                            <constraint firstAttribute="width" constant="45" id="GaN-Jh-ZW8"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20h-vs-EDO">
+                        <rect key="frame" x="80" y="15" width="304" height="38"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-2k-xkC">
+                                <rect key="frame" x="0.0" y="5" width="150" height="7"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ny1-s8-gPo">
+                                <rect key="frame" x="0.0" y="26" width="304" height="7"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="x0W-1r-oN5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LUq-2k-xkC" firstAttribute="height" secondItem="Ny1-s8-gPo" secondAttribute="height" id="4Hu-CW-bgb"/>
+                            <constraint firstItem="LUq-2k-xkC" firstAttribute="width" secondItem="20h-vs-EDO" secondAttribute="width" multiplier="0.493421" id="CEa-HQ-RF1"/>
+                            <constraint firstItem="LUq-2k-xkC" firstAttribute="top" secondItem="20h-vs-EDO" secondAttribute="top" constant="5" id="E7u-LI-mR9"/>
+                            <constraint firstItem="Ny1-s8-gPo" firstAttribute="leading" secondItem="20h-vs-EDO" secondAttribute="leading" id="Gsz-JD-5ow"/>
+                            <constraint firstItem="LUq-2k-xkC" firstAttribute="leading" secondItem="20h-vs-EDO" secondAttribute="leading" id="Ive-Zp-mH2"/>
+                            <constraint firstAttribute="bottom" secondItem="Ny1-s8-gPo" secondAttribute="bottom" constant="5" id="LK4-Tr-3t4"/>
+                            <constraint firstAttribute="height" priority="750" constant="38" id="TCS-yM-EKv"/>
+                            <constraint firstAttribute="trailing" secondItem="Ny1-s8-gPo" secondAttribute="trailing" id="xN4-1l-qF8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AkU-7S-hHo" firstAttribute="top" secondItem="qGP-Kt-s5a" secondAttribute="top" constant="10" id="8UH-3o-cdY"/>
+                    <constraint firstItem="20h-vs-EDO" firstAttribute="top" secondItem="qGP-Kt-s5a" secondAttribute="top" constant="15" id="A98-Co-gKA"/>
+                    <constraint firstAttribute="bottom" secondItem="20h-vs-EDO" secondAttribute="bottom" constant="15" id="WJi-Sf-U2C"/>
+                    <constraint firstItem="20h-vs-EDO" firstAttribute="leading" secondItem="AkU-7S-hHo" secondAttribute="trailing" constant="15" id="XRH-Fc-4ef"/>
+                    <constraint firstAttribute="trailing" secondItem="20h-vs-EDO" secondAttribute="trailing" constant="30" id="lQd-ns-Pk3"/>
+                    <constraint firstItem="AkU-7S-hHo" firstAttribute="leading" secondItem="qGP-Kt-s5a" secondAttribute="leading" constant="20" id="om3-lE-cpY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-156.52173913043478" y="-39.508928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

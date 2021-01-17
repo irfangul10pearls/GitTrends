@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		EE22027925B48DFD00DC0442 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22027825B48DFD00DC0442 /* UITableViewCellExtension.swift */; };
 		EE22027C25B4A12200DC0442 /* DPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22027B25B4A12200DC0442 /* DPImageView.swift */; };
 		EE22027F25B4A19200DC0442 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22027E25B4A19200DC0442 /* UIViewExtension.swift */; };
+		EE22028425B4B5A700DC0442 /* ShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22028225B4B5A700DC0442 /* ShimmerCell.swift */; };
+		EE22028525B4B5A700DC0442 /* ShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE22028325B4B5A700DC0442 /* ShimmerCell.xib */; };
 		EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765725B44D0D00395313 /* Assets.xcassets */; };
 		EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */; };
 		EEA5766625B44D0D00395313 /* GitTrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5766525B44D0D00395313 /* GitTrendsTests.swift */; };
@@ -27,6 +29,10 @@
 		EEA576BA25B48B2D00395313 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576B925B48B2D00395313 /* Repo.swift */; };
 		EEA576BE25B48C1500395313 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */; };
 		EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */; };
+		EEFE766E25B4DABB008A9666 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE766D25B4DABB008A9666 /* HttpManager.swift */; };
+		EEFE767025B4E1B0008A9666 /* TrendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE766F25B4E1B0008A9666 /* TrendService.swift */; };
+		EEFE767325B4E632008A9666 /* TrendResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE767225B4E632008A9666 /* TrendResponse.swift */; };
+		EEFE767525B4E76E008A9666 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE767425B4E76E008A9666 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,8 @@
 		EE22027825B48DFD00DC0442 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		EE22027B25B4A12200DC0442 /* DPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPImageView.swift; sourceTree = "<group>"; };
 		EE22027E25B4A19200DC0442 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EE22028225B4B5A700DC0442 /* ShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCell.swift; sourceTree = "<group>"; };
+		EE22028325B4B5A700DC0442 /* ShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerCell.xib; sourceTree = "<group>"; };
 		EEA5764B25B44D0B00395313 /* GitTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5765725B44D0D00395313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA5765A25B44D0D00395313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +86,10 @@
 		EEA576B925B48B2D00395313 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoCell.xib; sourceTree = "<group>"; };
+		EEFE766D25B4DABB008A9666 /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		EEFE766F25B4E1B0008A9666 /* TrendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendService.swift; sourceTree = "<group>"; };
+		EEFE767225B4E632008A9666 /* TrendResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendResponse.swift; sourceTree = "<group>"; };
+		EEFE767425B4E76E008A9666 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		F862AE5BFAAB5F98BAAD2549 /* Pods-GitTrendsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrendsTests.debug.xcconfig"; path = "Target Support Files/Pods-GitTrendsTests/Pods-GitTrendsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +161,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EE22028025B4A62C00DC0442 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		EE22028125B4B58600DC0442 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				EE22028225B4B5A700DC0442 /* ShimmerCell.swift */,
+				EE22028325B4B5A700DC0442 /* ShimmerCell.xib */,
+			);
+			path = Shimmer;
+			sourceTree = "<group>";
+		};
 		EEA5764225B44D0B00395313 = {
 			isa = PBXGroup;
 			children = (
@@ -174,12 +202,15 @@
 		EEA5764D25B44D0B00395313 /* GitTrends */ = {
 			isa = PBXGroup;
 			children = (
-				EE22027D25B4A17E00DC0442 /* Extensions */,
-				EE22027A25B4A0DF00DC0442 /* Controls */,
 				EEA5769A25B487C100395313 /* AppDelegate */,
-				EEA576BB25B48BD300395313 /* Cell */,
-				EEA576AC25B4885000395313 /* Entity */,
 				EEA5769F25B487DA00395313 /* Scenes */,
+				EEA576AC25B4885000395313 /* Entity */,
+				EEA576BB25B48BD300395313 /* Cell */,
+				EE22027A25B4A0DF00DC0442 /* Controls */,
+				EEFE766B25B4C640008A9666 /* Networking */,
+				EE22027D25B4A17E00DC0442 /* Extensions */,
+				EEFE766C25B4C651008A9666 /* Service */,
+				EE22028025B4A62C00DC0442 /* Animations */,
 				EEA5765725B44D0D00395313 /* Assets.xcassets */,
 				EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */,
 				EEA5765C25B44D0D00395313 /* Info.plist */,
@@ -227,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA576B925B48B2D00395313 /* Repo.swift */,
+				EEFE767425B4E76E008A9666 /* Owner.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -253,6 +285,7 @@
 		EEA576BB25B48BD300395313 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EE22028125B4B58600DC0442 /* Shimmer */,
 				EEA576C025B48CE300395313 /* TrendingRepo */,
 			);
 			path = Cell;
@@ -267,6 +300,31 @@
 			path = TrendingRepo;
 			sourceTree = "<group>";
 		};
+		EEFE766B25B4C640008A9666 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EEFE766D25B4DABB008A9666 /* HttpManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EEFE766C25B4C651008A9666 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EEFE767125B4E611008A9666 /* Response */,
+				EEFE766F25B4E1B0008A9666 /* TrendService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EEFE767125B4E611008A9666 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EEFE767225B4E632008A9666 /* TrendResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,6 +336,7 @@
 				EEA5764725B44D0B00395313 /* Sources */,
 				EEA5764825B44D0B00395313 /* Frameworks */,
 				EEA5764925B44D0B00395313 /* Resources */,
+				EFD23011685941FE777A9775 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +374,7 @@
 				EEA5766825B44D0D00395313 /* Sources */,
 				EEA5766925B44D0D00395313 /* Frameworks */,
 				EEA5766A25B44D0D00395313 /* Resources */,
+				4C4450970CCA119A935ADF91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,6 +436,7 @@
 			files = (
 				EEA576B725B48AAD00395313 /* TrendView.xib in Resources */,
 				EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */,
+				EE22028525B4B5A700DC0442 /* ShimmerCell.xib in Resources */,
 				EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */,
 				EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */,
 			);
@@ -418,6 +479,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C4450970CCA119A935ADF91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitTrends-GitTrendsUITests/Pods-GitTrends-GitTrendsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitTrends-GitTrendsUITests/Pods-GitTrends-GitTrendsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitTrends-GitTrendsUITests/Pods-GitTrends-GitTrendsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		991A4861A1632B56D982058C /* [CP] Check Pods Manifest.lock */ = {
@@ -464,6 +542,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EFD23011685941FE777A9775 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitTrends/Pods-GitTrends-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitTrends/Pods-GitTrends-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitTrends/Pods-GitTrends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -472,15 +567,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA5769D25B487C100395313 /* AppDelegate.swift in Sources */,
+				EEFE767525B4E76E008A9666 /* Owner.swift in Sources */,
+				EEFE767025B4E1B0008A9666 /* TrendService.swift in Sources */,
 				EEA576B425B48AAD00395313 /* BaseController.swift in Sources */,
 				EE22027F25B4A19200DC0442 /* UIViewExtension.swift in Sources */,
 				EE22027925B48DFD00DC0442 /* UITableViewCellExtension.swift in Sources */,
+				EEFE767325B4E632008A9666 /* TrendResponse.swift in Sources */,
 				EEA576BE25B48C1500395313 /* TrendingRepoCell.swift in Sources */,
+				EE22028425B4B5A700DC0442 /* ShimmerCell.swift in Sources */,
 				EEA576B625B48AAD00395313 /* TrendView.swift in Sources */,
 				EEA576BA25B48B2D00395313 /* Repo.swift in Sources */,
 				EE22027C25B4A12200DC0442 /* DPImageView.swift in Sources */,
 				EEA5769E25B487C100395313 /* SceneDelegate.swift in Sources */,
 				EEA576B525B48AAD00395313 /* BaseView.swift in Sources */,
+				EEFE766E25B4DABB008A9666 /* HttpManager.swift in Sources */,
 				EEA576B825B48AAD00395313 /* TrendController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

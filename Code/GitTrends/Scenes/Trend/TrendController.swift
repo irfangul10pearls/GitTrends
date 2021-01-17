@@ -7,8 +7,15 @@ class TrendController : BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trending Repos"
+        getTrendsFromService()
     }
 
-
+    // MARK: - Service
+    
+    func getTrendsFromService() {
+        let trend = TrendService().getGithubTrends { repos, error in
+            NSLog("hello")
+        }
+    }
 }
 

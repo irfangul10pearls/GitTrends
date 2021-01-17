@@ -2,20 +2,14 @@
 
 import Foundation
 
-struct Repo {
+struct Repo: Codable {
     let name: String
-    let remarks: String
-    let stars: Int
+    let description: String
+    let starsCount: Int
     let language: String
-    let authorDP: String
-    let authorUserName: String
     
-    static func getRepos() -> [Repo] {
-        return [ Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92"),
-                 Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92"),
-                 Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92"),
-                 Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92"),
-                 Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92"),
-                 Repo(name: "popo-python", remarks: "This is a python", stars: 115, language: "Python", authorDP: "irfan", authorUserName: "irfangul92")]
+    enum CodingKeys: String, CodingKey {
+        case name, description, language
+        case starsCount = "stargazers_count"
     }
 }
