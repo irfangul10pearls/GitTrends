@@ -26,6 +26,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fge-0g-3zb" secondAttribute="trailing" id="vKM-9I-VQp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="tblView" destination="Fge-0g-3zb" id="qXG-Zi-kiL"/>
+            </connections>
             <point key="canvasLocation" x="133" y="130"/>
         </view>
     </objects>

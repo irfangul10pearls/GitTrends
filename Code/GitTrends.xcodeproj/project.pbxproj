@@ -10,6 +10,7 @@
 		20A8B88D77FFF482163F7EB5 /* Pods_GitTrends_GitTrendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE61C6872A2112F033384AF /* Pods_GitTrends_GitTrendsUITests.framework */; };
 		2717020E7C8C0A74169DFE40 /* Pods_GitTrends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2656E3F95A1AE34C262E778 /* Pods_GitTrends.framework */; };
 		8BC98449B04453C51D898B7D /* Pods_GitTrendsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF2DBDE09CC0931CFA1862B /* Pods_GitTrendsTests.framework */; };
+		EE22027925B48DFD00DC0442 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22027825B48DFD00DC0442 /* UITableViewCellExtension.swift */; };
 		EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765725B44D0D00395313 /* Assets.xcassets */; };
 		EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */; };
 		EEA5766625B44D0D00395313 /* GitTrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5766525B44D0D00395313 /* GitTrendsTests.swift */; };
@@ -21,6 +22,9 @@
 		EEA576B625B48AAD00395313 /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576B125B48AAD00395313 /* TrendView.swift */; };
 		EEA576B725B48AAD00395313 /* TrendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA576B225B48AAD00395313 /* TrendView.xib */; };
 		EEA576B825B48AAD00395313 /* TrendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576B325B48AAD00395313 /* TrendController.swift */; };
+		EEA576BA25B48B2D00395313 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576B925B48B2D00395313 /* Repo.swift */; };
+		EEA576BE25B48C1500395313 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */; };
+		EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 		C2656E3F95A1AE34C262E778 /* Pods_GitTrends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTrends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32B8F8A4C786B30921172CD /* Pods-GitTrends-GitTrendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrends-GitTrendsUITests.release.xcconfig"; path = "Target Support Files/Pods-GitTrends-GitTrendsUITests/Pods-GitTrends-GitTrendsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E545725224EC6AEEF5685E7B /* Pods-GitTrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrends.debug.xcconfig"; path = "Target Support Files/Pods-GitTrends/Pods-GitTrends.debug.xcconfig"; sourceTree = "<group>"; };
+		EE22027825B48DFD00DC0442 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		EEA5764B25B44D0B00395313 /* GitTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5765725B44D0D00395313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA5765A25B44D0D00395313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		EEA576B125B48AAD00395313 /* TrendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
 		EEA576B225B48AAD00395313 /* TrendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendView.xib; sourceTree = "<group>"; };
 		EEA576B325B48AAD00395313 /* TrendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendController.swift; sourceTree = "<group>"; };
+		EEA576B925B48B2D00395313 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
+		EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoCell.xib; sourceTree = "<group>"; };
 		F862AE5BFAAB5F98BAAD2549 /* Pods-GitTrendsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrendsTests.debug.xcconfig"; path = "Target Support Files/Pods-GitTrendsTests/Pods-GitTrendsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +128,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EE22027725B48DE800DC0442 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE22027825B48DFD00DC0442 /* UITableViewCellExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		EEA5764225B44D0B00395313 = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +161,9 @@
 		EEA5764D25B44D0B00395313 /* GitTrends */ = {
 			isa = PBXGroup;
 			children = (
-				EEA576AC25B4885000395313 /* Entity */,
 				EEA5769A25B487C100395313 /* AppDelegate */,
+				EEA576BB25B48BD300395313 /* Cell */,
+				EEA576AC25B4885000395313 /* Entity */,
 				EEA5769F25B487DA00395313 /* Scenes */,
 				EEA5765725B44D0D00395313 /* Assets.xcassets */,
 				EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */,
@@ -194,6 +211,7 @@
 		EEA576AC25B4885000395313 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EEA576B925B48B2D00395313 /* Repo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -215,6 +233,24 @@
 				EEA576B225B48AAD00395313 /* TrendView.xib */,
 			);
 			path = Trend;
+			sourceTree = "<group>";
+		};
+		EEA576BB25B48BD300395313 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE22027725B48DE800DC0442 /* Extension */,
+				EEA576C025B48CE300395313 /* TrendingRepo */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEA576C025B48CE300395313 /* TrendingRepo */ = {
+			isa = PBXGroup;
+			children = (
+				EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */,
+				EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */,
+			);
+			path = TrendingRepo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +362,7 @@
 			files = (
 				EEA576B725B48AAD00395313 /* TrendView.xib in Resources */,
 				EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */,
+				EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */,
 				EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +459,10 @@
 			files = (
 				EEA5769D25B487C100395313 /* AppDelegate.swift in Sources */,
 				EEA576B425B48AAD00395313 /* BaseController.swift in Sources */,
+				EE22027925B48DFD00DC0442 /* UITableViewCellExtension.swift in Sources */,
+				EEA576BE25B48C1500395313 /* TrendingRepoCell.swift in Sources */,
 				EEA576B625B48AAD00395313 /* TrendView.swift in Sources */,
+				EEA576BA25B48B2D00395313 /* Repo.swift in Sources */,
 				EEA5769E25B487C100395313 /* SceneDelegate.swift in Sources */,
 				EEA576B525B48AAD00395313 /* BaseView.swift in Sources */,
 				EEA576B825B48AAD00395313 /* TrendController.swift in Sources */,
