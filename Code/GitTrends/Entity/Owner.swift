@@ -3,7 +3,7 @@
 import Foundation
 
 struct Owner: Codable {
-    let id: String
+    let id: Int
     let avatarURL: String
     let login: String
     

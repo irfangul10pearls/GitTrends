@@ -6,10 +6,11 @@ struct Repo: Codable {
     let name: String
     let description: String
     let starsCount: Int
-    let language: String
+    let language: String?
+    let owner: Owner
     
     enum CodingKeys: String, CodingKey {
-        case name, description, language
+        case name, description, language, owner
         case starsCount = "stargazers_count"
     }
 }

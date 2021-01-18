@@ -2,13 +2,31 @@
 
 import Foundation
 
+typealias serviceCompletion = (Decodable?, Error?) -> Void
+
 class HttpManager {
     
     let urlSession = URLSession(configuration: URLSessionConfiguration.default)
     
     var dataTask: URLSessionDataTask?
     
-    func get(urlString: String, completion: @escaping (Data?, Error?) -> Void) {
+    private func parseDataToModel<T: Decodable>(_ data: Data, model: T.Type, completion: @escaping serviceCompletion) {
+        var decodedObject: Decodable?
+        do {
+            let decoder = JSONDecoder()
+            decodedObject = try decoder.decode(model.self, from: data)
+            DispatchQueue.main.async {
+                completion(decodedObject, nil)
+            }
+        } catch let exception {
+            NSLog("PARSING ERROR: ", (exception as NSError).debugDescription)
+            DispatchQueue.main.async {
+                completion(nil, (exception as NSError))
+            }
+        }
+    }
+    
+    func get<T: Decodable>(urlString: String, model: T.Type, completion: @escaping serviceCompletion) {
         
         dataTask?.cancel()
         
@@ -26,12 +44,12 @@ class HttpManager {
             if let data = data,
                let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
-                DispatchQueue.main.async {
-                  completion(data, nil)
-                }
+                self.parseDataToModel(data, model: model.self, completion: completion)
             }
         }
         
         dataTask?.resume()
     }
+    
+    
 }

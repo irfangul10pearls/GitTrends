@@ -15,6 +15,7 @@
 		EE22027F25B4A19200DC0442 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22027E25B4A19200DC0442 /* UIViewExtension.swift */; };
 		EE22028425B4B5A700DC0442 /* ShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22028225B4B5A700DC0442 /* ShimmerCell.swift */; };
 		EE22028525B4B5A700DC0442 /* ShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE22028325B4B5A700DC0442 /* ShimmerCell.xib */; };
+		EE5619A925B58FDE00E1A9C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5619A825B58FDE00E1A9C7 /* Constants.swift */; };
 		EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765725B44D0D00395313 /* Assets.xcassets */; };
 		EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */; };
 		EEA5766625B44D0D00395313 /* GitTrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5766525B44D0D00395313 /* GitTrendsTests.swift */; };
@@ -66,6 +67,7 @@
 		EE22027E25B4A19200DC0442 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		EE22028225B4B5A700DC0442 /* ShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCell.swift; sourceTree = "<group>"; };
 		EE22028325B4B5A700DC0442 /* ShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerCell.xib; sourceTree = "<group>"; };
+		EE5619A825B58FDE00E1A9C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EEA5764B25B44D0B00395313 /* GitTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5765725B44D0D00395313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA5765A25B44D0D00395313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 			path = Shimmer;
 			sourceTree = "<group>";
 		};
+		EE5619A725B58FC800E1A9C7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EE5619A825B58FDE00E1A9C7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		EEA5764225B44D0B00395313 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		EEA5764D25B44D0B00395313 /* GitTrends */ = {
 			isa = PBXGroup;
 			children = (
+				EE5619A725B58FC800E1A9C7 /* Constants */,
 				EEA5769A25B487C100395313 /* AppDelegate */,
 				EEA5769F25B487DA00395313 /* Scenes */,
 				EEA576AC25B4885000395313 /* Entity */,
@@ -567,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA5769D25B487C100395313 /* AppDelegate.swift in Sources */,
+				EE5619A925B58FDE00E1A9C7 /* Constants.swift in Sources */,
 				EEFE767525B4E76E008A9666 /* Owner.swift in Sources */,
 				EEFE767025B4E1B0008A9666 /* TrendService.swift in Sources */,
 				EEA576B425B48AAD00395313 /* BaseController.swift in Sources */,

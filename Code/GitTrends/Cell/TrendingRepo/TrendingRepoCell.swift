@@ -13,12 +13,12 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var stackViewDetails: UIStackView!
     
     func setCell(repo: Repo) {
-//        imgViewAuthorDP.image = UIImage(named: repo.authorDP)
-        lblAuthorName.text = repo.authorUserName
+//        imgViewAuthorDP.image = UIImage(named: repo.owner.avatarURL)
+        lblAuthorName.text = repo.owner.login
         lblRepoName.text = repo.name
-        lblRepoRemarks.text = repo.remarks
+        lblRepoRemarks.text = repo.description
         lblLanguage.text = repo.language
-        lblStars.text = String(repo.stars)
+        lblStars.text = String(repo.starsCount)
         
         selectedBackgroundView = UIView(frame: self.bounds)
         selectedBackgroundView?.backgroundColor = UIColor.clear

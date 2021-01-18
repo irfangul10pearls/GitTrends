@@ -6,7 +6,7 @@ import Lottie
 class TrendView: BaseView {
     
     @IBOutlet weak var tblView: UITableView!
-    let repos = Repo.getRepos()
+    var repos: [Repo] = []
     var isDataLoading = true {
         didSet {
             tblView.isUserInteractionEnabled = !isDataLoading

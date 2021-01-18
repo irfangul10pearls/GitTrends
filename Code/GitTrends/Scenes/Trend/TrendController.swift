@@ -13,7 +13,7 @@ class TrendController : BaseController {
     // MARK: - Service
     
     func getTrendsFromService() {
-        let trend = TrendService().getGithubTrends { repos, error in
+        let _ = TrendService().getGithubTrends { repos, error in
             NSLog("hello")
         }
     }
