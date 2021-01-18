@@ -29,6 +29,30 @@ class TrendView: BaseView {
         isDataLoading = true
     }
     
+    // MARK: - Populate Data
+    func reloadTable() {
+        tblView.reloadData()
+    }
+    
+    func setRepo(_ repos: [Repo]) {
+        self.repos = repos
+        reloadTable()
+    }
+    
+    func showError(_ error: Error) {
+        
+    }
+    
+    // MARK: - Shimmer
+    
+    func showShimmer() {
+        isDataLoading = true
+    }
+    
+    func hideShimmer() {
+        isDataLoading = false
+    }
+    
 }
 
 extension TrendView: UITableViewDataSource, UITableViewDelegate {

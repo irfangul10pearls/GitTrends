@@ -4,6 +4,10 @@ import UIKit
 
 class TrendController : BaseController {
 
+    var trendView: TrendView {
+        return view as! TrendView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trending Repos"
@@ -13,8 +17,14 @@ class TrendController : BaseController {
     // MARK: - Service
     
     func getTrendsFromService() {
-        let _ = TrendService().getGithubTrends { repos, error in
-            NSLog("hello")
+        trendView.showShimmer()
+        let _ = TrendService().getGithubTrends { data, error in
+            self.trendView.hideShimmer()
+            if let e = error {
+                self.trendView.showError(e)
+            } else {
+                self.trendView.setRepo(data!)
+            }
         }
     }
 }
