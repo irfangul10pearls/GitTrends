@@ -17,7 +17,7 @@ class TrendingRepoCell: UITableViewCell {
         lblAuthorName.text = repo.owner.login
         lblRepoName.text = repo.name
         lblRepoRemarks.text = repo.description
-        lblLanguage.text = repo.language
+        lblLanguage.text = repo.language ?? "not available"
         lblStars.text = String(repo.starsCount)
         
         selectedBackgroundView = UIView(frame: self.bounds)
