@@ -27,7 +27,7 @@ class TrendView: BaseView {
         tblView.register(TrendingRepoCell.Nib, forCellReuseIdentifier: TrendingRepoCell.reuseIdentifier)
         tblView.register(ShimmerCell.Nib, forCellReuseIdentifier: ShimmerCell.reuseIdentifier)
         tblView.tableFooterView = UIView()
-        tblView.estimatedRowHeight = 128.0
+        tblView.estimatedRowHeight = 162.0
         tblView.rowHeight = UITableView.automaticDimension
     }
     
@@ -55,7 +55,9 @@ class TrendView: BaseView {
     }
     
     func showError(_ error: Error) {
+        shouldShowShimmer = true
         tblView.isHidden = true
+        repos = []
         tblView.refreshControl?.endRefreshing()
     }
     
@@ -63,9 +65,12 @@ class TrendView: BaseView {
     
     func showShimmer() {
         shouldShowShimmer = repos.count > 0 ? false : true
+        if shouldShowShimmer {
+            reloadTable()
+        }
+        
         tblView.isHidden = false
         tblView.isUserInteractionEnabled = false
-        reloadTable()
     }
     
     func hideShimmer() {

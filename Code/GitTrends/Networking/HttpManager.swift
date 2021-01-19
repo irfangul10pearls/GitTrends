@@ -37,7 +37,7 @@ class HttpManager {
         } else {
             NSLog("PARSING ERROR: cannot parse image from data")
             DispatchQueue.main.async {
-                completion(nil, NSError(domain: "com.gittrends.error.parsing", code: 409, userInfo: ["message": "PARSING ERROR: cannot parse image from data"]))
+                completion(nil, NSError(domain: "com.gittrends.error.parsing", code: 400, userInfo: ["message": "PARSING ERROR: cannot parse image from data"]))
             }
         }
     }

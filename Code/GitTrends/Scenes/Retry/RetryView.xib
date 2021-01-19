@@ -20,7 +20,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mk-0t-H0M" customClass="AnimationView" customModule="Lottie">
                             <rect key="frame" x="11.5" y="0.0" width="280" height="240"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="240" id="e2F-Q2-BaW"/>
                                 <constraint firstAttribute="width" constant="280" id="spF-nF-hzh"/>
@@ -68,7 +67,6 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="L70-lb-uPx" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="99h-C3-yhZ"/>
                 <constraint firstItem="L70-lb-uPx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bjW-j9-9YV"/>
@@ -85,9 +83,6 @@
     </designables>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
