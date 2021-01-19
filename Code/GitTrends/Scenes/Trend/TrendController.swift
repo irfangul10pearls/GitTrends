@@ -10,7 +10,7 @@ class TrendController : BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Trending Repos"
+        self.title = "Trending Now"
         getTrendsFromService()
     }
 

@@ -3,7 +3,6 @@
 import UIKit
 
 class DPImageView: UIImageView {
-    let http = HttpManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -15,7 +14,7 @@ class DPImageView: UIImageView {
     func setUserImageFromURLString(urlString: String) {
         if let url = URL(string: urlString) {
             image = nil
-            http.getImage(url: url) { (image, error) in
+            HttpManager.shared.getImage(url: url) { (image, error) in
                 if let img = image {
                     self.image = img
                 }

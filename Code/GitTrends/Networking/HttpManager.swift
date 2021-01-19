@@ -8,11 +8,13 @@ typealias imageServiceCompletion = (UIImage?, Error?) -> Void
 
 
 class HttpManager {
-    
+    static let shared = HttpManager()
+        
     let urlSession = URLSession(configuration: URLSessionConfiguration.default)
+    var activeDataTasks: [String: URLSessionDataTask] = [:]
     
-    var dataTask: URLSessionDataTask?
-    
+    private init(){ }
+
     private func parseDataToModel<T: Decodable>(_ data: Data, model: T.Type, completion: @escaping serviceCompletion) {
         var decodedObject: Decodable?
         do {
@@ -52,12 +54,13 @@ class HttpManager {
     }
     
     func getImage(url: URL, completion: @escaping imageServiceCompletion) {
-        dataTask?.cancel()
-        
-        dataTask = urlSession.dataTask(with: url) { data, response, error in
+        cancelAnyOldTaskForURL(url)
+
+        let dataTask = urlSession.dataTask(with: url) { data, response, error in
             if let err = error {
                 DispatchQueue.main.async {
                     completion(nil, err)
+                    self.removeTaskForActiveList(url)
                 }
                 return
             }
@@ -67,19 +70,22 @@ class HttpManager {
             } else {
                 completion(nil, NSError(domain: "com.gittrends.http.error", code: 400, userInfo: ["message": "status is other than 200"]))
             }
+            
+            self.removeTaskForActiveList(url)
         }
         
-        dataTask?.resume()
+        dataTask.resume()
+        addTaskToActiveList(url, task: dataTask)
     }
     
     func get<T: Decodable>(url: URL, model: T.Type, completion: @escaping serviceCompletion) {
+        cancelAnyOldTaskForURL(url)
         
-        dataTask?.cancel()
-        
-        dataTask = urlSession.dataTask(with: url) { data, response, error in
+        let dataTask = urlSession.dataTask(with: url) { data, response, error in
             if let err = error {
                 DispatchQueue.main.async {
                     completion(nil, err)
+                    self.removeTaskForActiveList(url)
                 }
                 return
             }
@@ -89,10 +95,25 @@ class HttpManager {
             } else {
                 completion(nil, NSError(domain: "com.gittrends.http.error", code: 400, userInfo: ["message": "status is other than 200"]))
             }
+            
+            self.removeTaskForActiveList(url)
         }
         
-        dataTask?.resume()
+        dataTask.resume()
+        addTaskToActiveList(url, task: dataTask)
     }
     
+    private func cancelAnyOldTaskForURL(_ url: URL) {
+        if let task = activeDataTasks[url.absoluteString] {
+            task.cancel()
+        }
+    }
     
+    private func removeTaskForActiveList(_ url: URL) {
+        activeDataTasks.removeValue(forKey: url.absoluteString)
+    }
+    
+    private func addTaskToActiveList(_ url: URL, task: URLSessionDataTask) {
+        activeDataTasks[url.absoluteString] = task
+    }
 }

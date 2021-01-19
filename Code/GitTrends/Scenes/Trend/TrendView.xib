@@ -21,6 +21,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fge-0g-3zb" secondAttribute="bottom" id="2Ik-WP-cl8"/>
                 <constraint firstItem="Fge-0g-3zb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8vM-9L-4sC"/>
