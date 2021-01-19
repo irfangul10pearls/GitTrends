@@ -7,11 +7,18 @@ class TrendView: BaseView {
     
     @IBOutlet weak var tblView: UITableView!
     var repos: [Repo] = []
-    var isDataLoading = true
+    var shouldShowShimmer = true
     
+    // MARK: - Setup UI
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    private func setupUI() {
+        setupTableView()
+        setupRetryView()
+        setupPullToRefresh()
     }
     
     private func setupTableView() {
@@ -24,22 +31,17 @@ class TrendView: BaseView {
         tblView.rowHeight = UITableView.automaticDimension
     }
     
-    private func setupUI() {
-        setupTableView()
-        loadRetryView()
-    }
-    
-    // MARK: - Retry View
-    private func loadRetryView() {
-        if let retryView = Bundle.main.loadNibNamed("RetryView", owner: nil, options: nil)?.first as? RetryView {
-            retryView.delegate = self
-            retryView.frame = tblView.bounds
-            addSubview(retryView)
-            sendSubviewToBack(retryView)
-        }
-    }
-    
     // MARK: - Pull to refresh
+    private func setupPullToRefresh() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onPullToRefresh(sender:)), for: .valueChanged)
+        tblView.refreshControl = refreshControl
+    }
+    
+    @objc
+    private func onPullToRefresh(sender: AnyObject) {
+        getTrendsFromService()
+    }
     
     // MARK: - Populate Data
     
@@ -54,30 +56,41 @@ class TrendView: BaseView {
     
     func showError(_ error: Error) {
         tblView.isHidden = true
+        tblView.refreshControl?.endRefreshing()
     }
     
     // MARK: - Shimmer
     
     func showShimmer() {
-        isDataLoading = true
+        shouldShowShimmer = repos.count > 0 ? false : true
         tblView.isHidden = false
         tblView.isUserInteractionEnabled = false
+        reloadTable()
     }
     
     func hideShimmer() {
-        isDataLoading = false
+        shouldShowShimmer = false
+        tblView.refreshControl?.endRefreshing()
         tblView.isUserInteractionEnabled = true
+    }
+    
+    // MARK: - Service
+    
+    private func getTrendsFromService() {
+        if let trendController = controller as? TrendController {
+            trendController.getTrendsFromService()
+        }
     }
     
 }
 
 extension TrendView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isDataLoading ? 12 : repos.count
+        return shouldShowShimmer ? 12 : repos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard !isDataLoading else {
+        guard !shouldShowShimmer else {
             return tableView.dequeueReusableCell(withIdentifier: ShimmerCell.reuseIdentifier)!
         }
         
@@ -98,9 +111,17 @@ extension TrendView: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension TrendView: RetryDelegate {
-    func onRetryAction() {
-        if let trendController = controller as? TrendController {
-            trendController.getTrendsFromService()
+    // MARK: - Retry View
+    private func setupRetryView() {
+        if let retryView = Bundle.main.loadNibNamed("RetryView", owner: nil, options: nil)?.first as? RetryView {
+            retryView.delegate = self
+            retryView.frame = tblView.bounds
+            addSubview(retryView)
+            sendSubviewToBack(retryView)
         }
+    }
+    
+    func onRetryAction() {
+        getTrendsFromService()
     }
 }

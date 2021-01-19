@@ -37,7 +37,9 @@ class HttpManager {
         
         dataTask = urlSession.dataTask(with: url) { data, response, error in
             if let err = error {
-                completion(nil, err)
+                DispatchQueue.main.async {
+                    completion(nil, err)
+                }
                 return
             }
             
