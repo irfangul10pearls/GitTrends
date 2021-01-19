@@ -45,6 +45,8 @@ class HttpManager {
                let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 self.parseDataToModel(data, model: model.self, completion: completion)
+            } else {
+                completion(nil, NSError(domain: "com.gittrends.http.error", code: 400, userInfo: ["message": "status is other than 200"]))
             }
         }
         

@@ -7,18 +7,14 @@ class TrendView: BaseView {
     
     @IBOutlet weak var tblView: UITableView!
     var repos: [Repo] = []
-    var isDataLoading = true {
-        didSet {
-            tblView.isUserInteractionEnabled = !isDataLoading
-        }
-    }
+    var isDataLoading = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    private func setupUI() {
+    private func setupTableView() {
         tblView.delegate = self
         tblView.dataSource = self
         tblView.register(TrendingRepoCell.Nib, forCellReuseIdentifier: TrendingRepoCell.reuseIdentifier)
@@ -26,10 +22,27 @@ class TrendView: BaseView {
         tblView.tableFooterView = UIView()
         tblView.estimatedRowHeight = 128.0
         tblView.rowHeight = UITableView.automaticDimension
-        isDataLoading = true
     }
     
+    private func setupUI() {
+        setupTableView()
+        loadRetryView()
+    }
+    
+    // MARK: - Retry View
+    private func loadRetryView() {
+        if let retryView = Bundle.main.loadNibNamed("RetryView", owner: nil, options: nil)?.first as? RetryView {
+            retryView.delegate = self
+            retryView.frame = tblView.bounds
+            addSubview(retryView)
+            sendSubviewToBack(retryView)
+        }
+    }
+    
+    // MARK: - Pull to refresh
+    
     // MARK: - Populate Data
+    
     func reloadTable() {
         tblView.reloadData()
     }
@@ -40,17 +53,20 @@ class TrendView: BaseView {
     }
     
     func showError(_ error: Error) {
-        
+        tblView.isHidden = true
     }
     
     // MARK: - Shimmer
     
     func showShimmer() {
         isDataLoading = true
+        tblView.isHidden = false
+        tblView.isUserInteractionEnabled = false
     }
     
     func hideShimmer() {
         isDataLoading = false
+        tblView.isUserInteractionEnabled = true
     }
     
 }
@@ -79,4 +95,12 @@ extension TrendView: UITableViewDataSource, UITableViewDelegate {
         tableView.endUpdates()
     }
     
+}
+
+extension TrendView: RetryDelegate {
+    func onRetryAction() {
+        if let trendController = controller as? TrendController {
+            trendController.getTrendsFromService()
+        }
+    }
 }

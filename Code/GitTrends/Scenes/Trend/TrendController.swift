@@ -20,8 +20,8 @@ class TrendController : BaseController {
         trendView.showShimmer()
         let _ = TrendService().getGithubTrends { data, error in
             self.trendView.hideShimmer()
-            if let e = error {
-                self.trendView.showError(e)
+            if let err = error {
+                self.trendView.showError(err)
             } else {
                 self.trendView.setRepo(data!)
             }

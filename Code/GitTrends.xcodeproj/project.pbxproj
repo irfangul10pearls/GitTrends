@@ -16,6 +16,7 @@
 		EE22028425B4B5A700DC0442 /* ShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22028225B4B5A700DC0442 /* ShimmerCell.swift */; };
 		EE22028525B4B5A700DC0442 /* ShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE22028325B4B5A700DC0442 /* ShimmerCell.xib */; };
 		EE5619A925B58FDE00E1A9C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5619A825B58FDE00E1A9C7 /* Constants.swift */; };
+		EE5619B625B6DC4E00E1A9C7 /* retry-and-user-busy.json in Resources */ = {isa = PBXBuildFile; fileRef = EE5619B525B6DC4E00E1A9C7 /* retry-and-user-busy.json */; };
 		EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765725B44D0D00395313 /* Assets.xcassets */; };
 		EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */; };
 		EEA5766625B44D0D00395313 /* GitTrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5766525B44D0D00395313 /* GitTrendsTests.swift */; };
@@ -30,6 +31,8 @@
 		EEA576BA25B48B2D00395313 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576B925B48B2D00395313 /* Repo.swift */; };
 		EEA576BE25B48C1500395313 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */; };
 		EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */; };
+		EEE0FA6425B6E0C5008AEE82 /* RetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE0FA6325B6E0C5008AEE82 /* RetryView.swift */; };
+		EEE0FA6925B6E0D3008AEE82 /* RetryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE0FA6825B6E0D2008AEE82 /* RetryView.xib */; };
 		EEFE766E25B4DABB008A9666 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE766D25B4DABB008A9666 /* HttpManager.swift */; };
 		EEFE767025B4E1B0008A9666 /* TrendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE766F25B4E1B0008A9666 /* TrendService.swift */; };
 		EEFE767325B4E632008A9666 /* TrendResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE767225B4E632008A9666 /* TrendResponse.swift */; };
@@ -68,6 +71,7 @@
 		EE22028225B4B5A700DC0442 /* ShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCell.swift; sourceTree = "<group>"; };
 		EE22028325B4B5A700DC0442 /* ShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerCell.xib; sourceTree = "<group>"; };
 		EE5619A825B58FDE00E1A9C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE5619B525B6DC4E00E1A9C7 /* retry-and-user-busy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "retry-and-user-busy.json"; sourceTree = "<group>"; };
 		EEA5764B25B44D0B00395313 /* GitTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5765725B44D0D00395313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA5765A25B44D0D00395313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		EEA576B925B48B2D00395313 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		EEA576BC25B48C1500395313 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingRepoCell.xib; sourceTree = "<group>"; };
+		EEE0FA6325B6E0C5008AEE82 /* RetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryView.swift; sourceTree = "<group>"; };
+		EEE0FA6825B6E0D2008AEE82 /* RetryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetryView.xib; sourceTree = "<group>"; };
 		EEFE766D25B4DABB008A9666 /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		EEFE766F25B4E1B0008A9666 /* TrendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendService.swift; sourceTree = "<group>"; };
 		EEFE767225B4E632008A9666 /* TrendResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendResponse.swift; sourceTree = "<group>"; };
@@ -163,13 +169,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		EE22028025B4A62C00DC0442 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
 		EE22028125B4B58600DC0442 /* Shimmer */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +184,14 @@
 				EE5619A825B58FDE00E1A9C7 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		EE5619B425B6DBA000E1A9C7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EE5619B525B6DC4E00E1A9C7 /* retry-and-user-busy.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		EEA5764225B44D0B00395313 = {
@@ -221,7 +228,7 @@
 				EEFE766B25B4C640008A9666 /* Networking */,
 				EE22027D25B4A17E00DC0442 /* Extensions */,
 				EEFE766C25B4C651008A9666 /* Service */,
-				EE22028025B4A62C00DC0442 /* Animations */,
+				EE5619B425B6DBA000E1A9C7 /* Animation */,
 				EEA5765725B44D0D00395313 /* Assets.xcassets */,
 				EEA5765925B44D0D00395313 /* LaunchScreen.storyboard */,
 				EEA5765C25B44D0D00395313 /* Info.plist */,
@@ -259,6 +266,7 @@
 		EEA5769F25B487DA00395313 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EEE0FA6225B6E0B0008AEE82 /* Retry */,
 				EEA576AD25B48AAD00395313 /* Base */,
 				EEA576B025B48AAD00395313 /* Trend */,
 			);
@@ -309,6 +317,15 @@
 				EEA576BD25B48C1500395313 /* TrendingRepoCell.xib */,
 			);
 			path = TrendingRepo;
+			sourceTree = "<group>";
+		};
+		EEE0FA6225B6E0B0008AEE82 /* Retry */ = {
+			isa = PBXGroup;
+			children = (
+				EEE0FA6325B6E0C5008AEE82 /* RetryView.swift */,
+				EEE0FA6825B6E0D2008AEE82 /* RetryView.xib */,
+			);
+			path = Retry;
 			sourceTree = "<group>";
 		};
 		EEFE766B25B4C640008A9666 /* Networking */ = {
@@ -445,9 +462,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5619B625B6DC4E00E1A9C7 /* retry-and-user-busy.json in Resources */,
 				EEA576B725B48AAD00395313 /* TrendView.xib in Resources */,
 				EEA5765B25B44D0D00395313 /* LaunchScreen.storyboard in Resources */,
 				EE22028525B4B5A700DC0442 /* ShimmerCell.xib in Resources */,
+				EEE0FA6925B6E0D3008AEE82 /* RetryView.xib in Resources */,
 				EEA576BF25B48C1500395313 /* TrendingRepoCell.xib in Resources */,
 				EEA5765825B44D0D00395313 /* Assets.xcassets in Resources */,
 			);
@@ -580,6 +599,7 @@
 				EEA5769D25B487C100395313 /* AppDelegate.swift in Sources */,
 				EE5619A925B58FDE00E1A9C7 /* Constants.swift in Sources */,
 				EEFE767525B4E76E008A9666 /* Owner.swift in Sources */,
+				EEE0FA6425B6E0C5008AEE82 /* RetryView.swift in Sources */,
 				EEFE767025B4E1B0008A9666 /* TrendService.swift in Sources */,
 				EEA576B425B48AAD00395313 /* BaseController.swift in Sources */,
 				EE22027F25B4A19200DC0442 /* UIViewExtension.swift in Sources */,
