@@ -3,19 +3,25 @@
 import UIKit
 
 class DPImageView: UIImageView {
+    let http = HttpManager()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        image = image ?? #imageLiteral(resourceName: "UserPlaceholder")
         makeRounded()
         contentMode = .scaleAspectFit
-        backgroundColor = .clear
+        backgroundColor = .opaqueSeparator
     }
     
     func setUserImageFromURLString(urlString: String) {
-        if let _ = URL(string: urlString) {
-            makeRounded()
+        if let url = URL(string: urlString) {
+            image = nil
+            http.getImage(url: url) { (image, error) in
+                if let img = image {
+                    self.image = img
+                }
+            }
         } else {
-            image = #imageLiteral(resourceName: "UserPlaceholder")
+            image = nil
         }
     }
 }

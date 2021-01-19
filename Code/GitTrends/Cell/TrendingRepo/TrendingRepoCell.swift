@@ -13,7 +13,7 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var stackViewDetails: UIStackView!
     
     func setCell(repo: Repo) {
-//        imgViewAuthorDP.image = UIImage(named: repo.owner.avatarURL)
+        imgViewAuthorDP.setUserImageFromURLString(urlString: repo.owner.avatarURL)
         lblAuthorName.text = repo.owner.login
         lblRepoName.text = repo.name
         lblRepoRemarks.text = repo.description

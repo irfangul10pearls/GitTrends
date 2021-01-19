@@ -3,5 +3,5 @@
 import Foundation
 
 struct Endpoints {
-    static let getGithubTrendingRepos = "https://api.github.com/search/repositories?q=language=+sort:stars"
+    static let getGithubTrendingReposURL = URL(string: "https://api.github.com/search/repositories?q=language=+sort:stars")!
 }
